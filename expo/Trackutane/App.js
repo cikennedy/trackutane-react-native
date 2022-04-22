@@ -21,7 +21,7 @@ export default function App() {
       <TouchableOpacity onPress={() => console.log("image tapped")}>
         <Image
           fadeDuration={1000}
-          source={require("./assets/Trackutane.png")}
+          source={require("./app/assets/Trackutane.png")}
         />
       </TouchableOpacity>
       <Button
