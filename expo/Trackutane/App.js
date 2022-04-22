@@ -1,5 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+  Image,
+  SafeAreaView,
+} from "react-native";
 
 export default function App() {
   const handlePress = () => {
@@ -12,7 +20,12 @@ export default function App() {
       <Text numberOfLines={1} onPress={handlePress}>
         Dolly Farton
       </Text>
-      <Image source={require("./assets/Trackutane.png")} />
+      <TouchableOpacity onPress={() => console.log("image tapped")}>
+        <Image
+          fadeDuration={1000}
+          source={require("./assets/Trackutane.png")}
+        />
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
