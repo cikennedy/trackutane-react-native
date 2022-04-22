@@ -3,10 +3,11 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  TouchableWithoutFeedback,
+  TouchableNativeFeedback,
   View,
   Image,
   SafeAreaView,
+  Button,
 } from "react-native";
 
 export default function App() {
@@ -17,15 +18,17 @@ export default function App() {
   return (
     // views are like divs in react-native
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>
-        Dolly Farton
-      </Text>
       <TouchableOpacity onPress={() => console.log("image tapped")}>
         <Image
           fadeDuration={1000}
           source={require("./assets/Trackutane.png")}
         />
       </TouchableOpacity>
+      <Button
+        title="Click Me"
+        color="white"
+        onPress={() => console.log("button tapped")}
+      ></Button>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
