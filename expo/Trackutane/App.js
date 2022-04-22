@@ -1,13 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, Image, SafeAreaView } from "react-native";
 
 export default function App() {
-  console.log("App executed.");
+  const handlePress = () => {
+    console.log("text pressed");
+  };
 
   return (
     // views are like divs in react-native
     <SafeAreaView style={styles.container}>
-      <Text>Dolly Farton</Text>
+      <Text numberOfLines={1} onPress={handlePress}>
+        Dolly Farton
+      </Text>
+      <Image source={require("./assets/Trackutane.png")} />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
