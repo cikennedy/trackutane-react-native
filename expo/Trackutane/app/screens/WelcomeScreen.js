@@ -1,17 +1,50 @@
 import React from "react";
-import { ImageBackground, StyleSheet } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import {
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  TouchableNativeFeedback,
+  View,
+  Image,
+  SafeAreaView,
+  Button,
+  StyleSheet,
+} from "react-native";
 
 function WelcomeScreen(props) {
-  return;
-  <ImageBackground
-    style={styles.background}
-    source={require("../assets/Trackutane.png")}
-  ></ImageBackground>;
+  const handlePress = () => {
+    console.log("text pressed");
+  };
+
+  return (
+    // <ImageBackground
+    //   style={styles.background}
+    //   source={require("../assets/Trackutane.png")}
+    // ></ImageBackground>;
+    <SafeAreaView style={styles.container}>
+      <TouchableOpacity onPress={() => console.log("image tapped")}>
+        <Image
+          fadeDuration={1000}
+          source={require("../assets/Trackutane.png")}
+        />
+      </TouchableOpacity>
+      <Button
+        title="Dolly"
+        color="white"
+        onPress={() => console.log("farton")}
+      ></Button>
+      <StatusBar style="auto" />
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-  background: {
+  container: {
     flex: 1,
+    backgroundColor: "dodgerblue",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
