@@ -29,6 +29,7 @@ function WelcomeScreen(props) {
           source={require("../assets/Trackutane.png")}
         />
       </TouchableOpacity>
+      <View style={styles.loginButton}></View>
       <Button
         title="Dolly"
         color="white"
@@ -45,6 +46,11 @@ const styles = StyleSheet.create({
     backgroundColor: "dodgerblue",
     alignItems: "center",
     justifyContent: "center",
+  },
+  loginButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "#fc5c65",
   },
 });
 
