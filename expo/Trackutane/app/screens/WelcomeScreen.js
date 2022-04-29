@@ -4,6 +4,7 @@ import { ImageBackground, StyleSheet } from "react-native";
 function WelcomeScreen(props) {
   return;
   <ImageBackground
+    style={styles.background}
     source={require("../assets/Trackutane.png")}
   ></ImageBackground>;
 }
