@@ -29,13 +29,23 @@ function WelcomeScreen(props) {
           source={require("../assets/Trackutane.png")}
         />
       </TouchableOpacity>
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
-      <Button
-        title="Dolly"
-        color="white"
-        onPress={() => console.log("farton")}
-      ></Button>
+      <View style={styles.loginButton}>
+        <Button
+          style={styles.button}
+          title="Log In"
+          color="white"
+          onPress={() => console.log("farton")}
+        ></Button>
+      </View>
+      <View style={styles.registerButton}>
+        <Button
+          style={styles.button}
+          title="Register"
+          color="white"
+          onPress={() => console.log("farton")}
+        ></Button>
+      </View>
+
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -57,6 +67,10 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 70,
     backgroundColor: "#4ecdc4",
+  },
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
