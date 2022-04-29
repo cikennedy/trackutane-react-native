@@ -30,6 +30,7 @@ function WelcomeScreen(props) {
         />
       </TouchableOpacity>
       <View style={styles.loginButton}></View>
+      <View style={styles.registerButton}></View>
       <Button
         title="Dolly"
         color="white"
@@ -51,6 +52,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 70,
     backgroundColor: "#fc5c65",
+  },
+  registerButton: {
+    width: "100%",
+    height: 70,
+    backgroundColor: "#4ecdc4",
   },
 });
 
